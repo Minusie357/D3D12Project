@@ -163,29 +163,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\d3d12book\Common\Camera.h" />
-    <ClInclude Include="..\..\d3d12book\Common\d3dApp.h" />
-    <ClInclude Include="..\..\d3d12book\Common\d3dUtil.h" />
-    <ClInclude Include="..\..\d3d12book\Common\d3dx12.h" />
-    <ClInclude Include="..\..\d3d12book\Common\DDSTextureLoader.h" />
-    <ClInclude Include="..\..\d3d12book\Common\GameTimer.h" />
-    <ClInclude Include="..\..\d3d12book\Common\GeometryGenerator.h" />
-    <ClInclude Include="..\..\d3d12book\Common\MathHelper.h" />
-    <ClInclude Include="..\..\d3d12book\Common\UploadBuffer.h" />
     <ClInclude Include="D3DMain.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\d3d12book\Common\Camera.cpp" />
-    <ClCompile Include="..\..\d3d12book\Common\d3dApp.cpp" />
-    <ClCompile Include="..\..\d3d12book\Common\d3dUtil.cpp" />
-    <ClCompile Include="..\..\d3d12book\Common\DDSTextureLoader.cpp" />
-    <ClCompile Include="..\..\d3d12book\Common\GameTimer.cpp" />
-    <ClCompile Include="..\..\d3d12book\Common\GeometryGenerator.cpp" />
-    <ClCompile Include="..\..\d3d12book\Common\MathHelper.cpp" />
-    <ClCompile Include="BoxApp.cpp" />
     <ClCompile Include="D3DMain.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -13,81 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\Common">
-      <UniqueIdentifier>{4393b755-2d18-4cd2-a9eb-1f27ba27875e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\Common">
-      <UniqueIdentifier>{7df91c1e-061b-45fc-a72e-41b2a50eb6dd}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D3DMain.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\Camera.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\d3dApp.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\d3dUtil.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\d3dx12.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\DDSTextureLoader.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="framework.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\GameTimer.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\GeometryGenerator.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\MathHelper.h">
-      <Filter>헤더 파일\Common</Filter>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>헤더 파일\Common</Filter>
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\d3d12book\Common\UploadBuffer.h">
-      <Filter>헤더 파일\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="framework.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D3DMain.cpp">
       <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BoxApp.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\d3d12book\Common\Camera.cpp">
-      <Filter>소스 파일\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\d3d12book\Common\d3dApp.cpp">
-      <Filter>소스 파일\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\d3d12book\Common\d3dUtil.cpp">
-      <Filter>소스 파일\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\d3d12book\Common\DDSTextureLoader.cpp">
-      <Filter>소스 파일\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\d3d12book\Common\GameTimer.cpp">
-      <Filter>소스 파일\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\d3d12book\Common\GeometryGenerator.cpp">
-      <Filter>소스 파일\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\d3d12book\Common\MathHelper.cpp">
-      <Filter>소스 파일\Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

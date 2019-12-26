@@ -15,8 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Matrix.cpp">
+    <ClCompile Include="D3DConsole.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DXGISystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DXGISystem.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DXGIInterface.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
