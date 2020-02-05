@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sources\GraphicsClass.cpp" />
+    <ClCompile Include="Sources\InputClass.cpp" />
+    <ClCompile Include="Sources\SystemClass.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\GraphicsClass.h" />
+    <ClInclude Include="Sources\InputClass.h" />
+    <ClInclude Include="Sources\SystemClass.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{41A78564-EC66-4DDA-883C-B6704B4B1ABB}</ProjectGuid>
@@ -72,15 +83,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)Binaries\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediates\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir)\Sources\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)Binaries\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediates\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir)\Sources\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)Binaries\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediates\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir)\Sources\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)Binaries\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediates\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir)\Sources\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -150,22 +173,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="D3D11Tutorial.h" />
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="targetver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="D3D11Tutorial.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="D3D11Tutorial.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="D3D11Tutorial.ico" />
-    <Image Include="small.ico" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

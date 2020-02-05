@@ -15,35 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11Tutorial.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="D3D11Tutorial.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\SystemClass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GraphicsClass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InputClass.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="D3D11Tutorial.rc">
-      <Filter>리소스 파일</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D3D11Tutorial.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
+    <ClInclude Include="Sources\SystemClass.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GraphicsClass.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InputClass.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
