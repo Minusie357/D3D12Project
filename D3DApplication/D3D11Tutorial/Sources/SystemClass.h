@@ -10,7 +10,6 @@
 #include "InputClass.h"
 #include "GraphicsClass.h"
 
-using namespace std;
 
 
 
@@ -33,12 +32,12 @@ private:
 	void ShutdownWindows();
 
 private:
-	LPCWSTR applicationName;
-	HINSTANCE hInstance;
-	HWND hWnd;
+	std::unique_ptr<const wchar_t[]> applicationName;
+	HINSTANCE hInstance = nullptr;
+	HWND hWnd = nullptr;
 
-	unique_ptr<InputClass> inputClass;
-	unique_ptr<GraphicsClass> graphicsClass;
+	std::unique_ptr<InputClass> inputClass;
+	std::unique_ptr<GraphicsClass> graphicsClass;
 };
 
 

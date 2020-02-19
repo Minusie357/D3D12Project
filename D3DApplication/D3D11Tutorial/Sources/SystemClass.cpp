@@ -1,5 +1,8 @@
 #include "SystemClass.h"
 
+using namespace std;
+
+
 bool SystemClass::Initialize()
 {
 	// Initializes the width and height of the screen to zero 
@@ -43,15 +46,10 @@ void SystemClass::Shutdown()
 {
 	// Releases the graphics object
 	if (graphicsClass.get())
-	{
 		graphicsClass->Shutdown();
-		graphicsClass.release();
-	}
 
 	if (inputClass.get())
-	{
 		inputClass.release();
-	}
 
 	ShutdownWindows();
 }
@@ -157,7 +155,7 @@ void SystemClass::InitializeWindows(int& screenHeight, int& screenWidth)
 	hInstance = GetModuleHandle(NULL);
 
 	// Give the application a name
-	applicationName = L"Engine";
+	applicationName = unique_ptr<const wchar_t[]>(L"Engine");
 
 
 
@@ -172,7 +170,7 @@ void SystemClass::InitializeWindows(int& screenHeight, int& screenWidth)
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
 	wc.lpszMenuName = NULL;
-	wc.lpszClassName = applicationName;
+	wc.lpszClassName = applicationName.get();
 	wc.cbSize = sizeof(WNDCLASSEX);
 	// Registers the window class
 	RegisterClassEx(&wc);
@@ -185,7 +183,7 @@ void SystemClass::InitializeWindows(int& screenHeight, int& screenWidth)
 
 	// Setup the screen settings depending on whether it is running
 	// in full screen or in windows mode
-	if (FULL_SCREEN)
+	if (App::FULL_SCREEN)
 	{
 		memset(&dmScreenSettings, 0, sizeof(dmScreenSettings));
 		dmScreenSettings.dmSize = sizeof(dmScreenSettings);
@@ -215,8 +213,8 @@ void SystemClass::InitializeWindows(int& screenHeight, int& screenWidth)
 	// and get the handle to it
 	hWnd = CreateWindowEx(
 		WS_EX_APPWINDOW,
-		applicationName,
-		applicationName,
+		applicationName.get(),
+		applicationName.get(),
 		WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_POPUP,
 		posX,
 		posY,
@@ -239,17 +237,15 @@ void SystemClass::ShutdownWindows()
 	ShowCursor(true);
 
 	// Fixes the display settings if leaving full screen mode
-	if (FULL_SCREEN)
-	{
+	if (App::FULL_SCREEN)
 		ChangeDisplaySettings(NULL, 0);
-	}
 
 	// Removes the window
 	DestroyWindow(hWnd);
 	hWnd = NULL;
 
 	// Remove the application instances
-	UnregisterClass(applicationName, hInstance);
+	UnregisterClass(applicationName.get(), hInstance);
 	hInstance = NULL;
 
 	// Releases the pointer to this class

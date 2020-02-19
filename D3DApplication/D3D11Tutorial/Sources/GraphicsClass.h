@@ -1,19 +1,22 @@
 #pragma once
 
-#ifndef _GRAPHICSCLASS_H_
-#define _GRAPHICSCLASS_H_
-
 #include <Windows.h>
 #include <memory>
-using namespace std;
+#include "D3DClass.h"
+#include "CameraClass.h"
+#include "ModelClass.h"
+#include "ColorShaderClass.h"	
 
 
 
 // GLOBAL VARIABLES
-const bool FULL_SCREEN = true;
-const bool VSYNC_ENABLED = true;
-const float SCREEN_DEPTH = 1000.f;
-const float SCREEN_NEAR = 0.1f;
+namespace App
+{
+	constexpr bool FULL_SCREEN = false;
+	constexpr bool VSYNC_ENABLED = true;
+	constexpr float SCREEN_DEPTH = 1000.f;
+	constexpr float SCREEN_NEAR = 0.1f;
+}
 
 
 
@@ -38,5 +41,8 @@ private:
 
 
 private:
+	std::unique_ptr<D3DClass> direct3D;
+	std::unique_ptr<CameraClass> camera;
+	std::unique_ptr<ModelClass> model;
+	std::unique_ptr<ColorShaderClass> colorShader;
 };
-#endif // !_GRAPHICSCLASS_H_
